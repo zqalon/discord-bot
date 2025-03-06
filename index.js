@@ -7,6 +7,7 @@ const { token } = require('./config.json');
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+//registers all files in commands/utility as commands
 client.commands = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
@@ -27,6 +28,8 @@ for (const folder of commandFolders) {
 	}
 }
 
+
+//registers all files in events as events
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
