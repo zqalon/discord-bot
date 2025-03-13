@@ -6,7 +6,7 @@ env.config();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-const prompt = `The following is a conversation from a group chat. Create a simple, formatted schedule from the events the group chat members have planned. Prioritize simplicity.
+const prompt = `The following is a conversation from a group chat. Create a simple, formatted schedule from the events the group chat members have planned. Prioritize simplicity. Use a table format.
 
 --CHAT BEGINS--
 ha ! — 3/3/25, 10:56 AM
