@@ -8,7 +8,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const prompt = `The following is a conversation from a discord channel group chat. 
                 Create a simple, formatted schedule from the events the group chat members have planned. 
-                Prioritize simplicity. Use a table format that has a good design in Discord. Do not title the table\n\n`;
+                Prioritize simplicity. Use a table format that has a good design in Discord. Do not title the table. Do not include events that have already passed.\n\n`;
 
 let getSched = async function(logs){
     let fullPrompt = prompt + logs;
