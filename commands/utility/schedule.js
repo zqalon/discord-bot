@@ -17,7 +17,8 @@ module.exports = {
 			//format logs
 			
 
-			let logData = `Server logs for #${interaction.channel.name}\n\n`;
+			let logData = `Server logs for #${interaction.channel.name}
+							Current time is ${new Date()}\n\n`;
 			messages.reverse().forEach(msg => {
 				const pacificTime = new Intl.DateTimeFormat('en-US', {
 					timeZone: 'America/Los_Angeles',
